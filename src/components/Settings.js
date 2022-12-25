@@ -19,14 +19,12 @@ class Settings extends Component {
   }
 
   componentDidMount = () => {
-    console.log("Settings - componentDidMount");
     if (!this.props.authState.isLoading && this.state.municipals.length === 0) {
       this.getAllMunicipal();
     }
   };
 
   componentDidUpdate(prevProps) {
-    console.log("componentDidUpdate");
     if (JSON.stringify(this.props) !== JSON.stringify(prevProps)) {
       if (!this.props.authState.isLoading) {
         this.getAllMunicipal();

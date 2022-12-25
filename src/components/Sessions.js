@@ -94,9 +94,9 @@ class Sessions extends Component {
               As minhas sessões
             </div>
             <div className="top_option">
-              <Link to="/settings">Settings</Link>{" "}
+              <Link to="/settings">Definições</Link>{" "}
               <span style={{ color: `#98a5b3` }}> | </span>
-              <Link to="/logout">Logout</Link>
+              <Link to="/logout">Sair</Link>
             </div>
           </div>
 
@@ -111,12 +111,9 @@ class Sessions extends Component {
         </div>
 
         {isLoaded && sessionList.length > 0 && <div>{sessionList}</div>}
-        {isLoaded &&
-          sessionList.length == 0 && (
-            <div className="no_info_sessions">
-              Sem sessões de estacionamento.
-            </div>
-          )}
+        {isLoaded && sessionList.length == 0 && (
+          <div className="no_info_sessions">Sem sessões de estacionamento.</div>
+        )}
         {!isLoaded && (
           <div className="no_info_sessions">
             A procurar pelas últimas sessões de estacionamento. Por favor
